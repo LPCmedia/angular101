@@ -6,7 +6,7 @@ import { takeUntil, map, filter, mergeMap, tap } from 'rxjs/operators';
 @Component({
   selector: 'll-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
 

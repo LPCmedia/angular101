@@ -5,6 +5,8 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { Routes, RouterModule } from '@angular/router';
 import { SlideComponent } from 'src/app/shared/components/slide/slide.component';
 import { WebComponent } from './web/web/web.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BigComponent } from './big/big/big.component';
 
 const routes: Routes = [
   {
@@ -23,7 +25,7 @@ const routes: Routes = [
     path: 'timeline',
     component: TimelineComponent,
     data: {
-      title: 'Historical Perspective',
+      title: 'Intro / Historical Perspective',
       nextRoute: 'web-components',
     }
   },
@@ -31,7 +33,15 @@ const routes: Routes = [
     path: 'web-components',
     component: WebComponent,
     data: {
-      title: 'Web Components',
+      title: 'Intro / About Web Components',
+      nextRoute: 'big-3',
+    }
+  },
+  {
+    path: 'big-3',
+    component: BigComponent,
+    data: {
+      title: 'Intro / Big 3',
       nextRoute: '',
     }
   }
@@ -40,8 +50,9 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    NgxChartsModule,
     RouterModule.forChild(routes),
   ],
-  declarations: [AgendaComponent, TimelineComponent, SlideComponent, WebComponent]
+  declarations: [AgendaComponent, TimelineComponent, SlideComponent, WebComponent, BigComponent]
 })
 export class IntroModule { }

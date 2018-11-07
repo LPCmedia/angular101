@@ -1,3 +1,18 @@
-<p>
-  timeline works!
-</p>
+<ngx-charts-line-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="multi"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisTickFormatting]="xAxisTickFormatting"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [autoScale]="autoScale"
+      legendPosition="right"
+      [timeline]="true"
+      (select)="onSelect($event)">
+</ngx-charts-line-chart>

@@ -1,0 +1,30 @@
+:host {
+    padding: 40px 35px;
+    display: block;
+    ::ng-deep h1, ::ng-deep h2, ::ng-deep h3, ::ng-deep h4, ::ng-deep h5, ::ng-deep h6 {
+        font-size: 4.5em;
+    }
+    ::ng-deep p, ::ng-deep li {
+        font-size: 3.0em;
+    }
+    
+    .slide-div {
+        display: flex;
+        justify-content: space-around;
+        ::ng-deep div {
+            min-width: 500px;
+            margin-right: 150px;
+            &.code {
+                background-color: #ccc;
+                color: #fff;
+                padding: 30px;
+                border-radius: 5px;
+                > code {
+                    background-color: #ccc;
+                }
+            }
+        }
+
+    }
+    
+}
