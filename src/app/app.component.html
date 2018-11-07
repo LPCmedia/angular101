@@ -1,0 +1,20 @@
+<cm-sidenav>
+</cm-sidenav>
+<cm-topnav theme="secondary">
+  <div cmNavElements showForDevices="['tablet', 'web']">
+    <cm-nav>
+      <cm-icon (click)="gotoStart()" icon="action:home" type="link"></cm-icon>
+    </cm-nav>
+    <cm-nav *ngIf="false">
+      <cm-icon (click)="handlePreviousRoute()" icon="navigation:arrow_back" type="link"></cm-icon>
+    </cm-nav>
+    <cm-nav>
+      <cm-icon (click)="handleNextRoute()" icon="navigation:arrow_forward" type="link"></cm-icon>
+    </cm-nav>
+  </div>
+
+</cm-topnav>
+<cm-ribbon [title]="title"></cm-ribbon>
+<cm-main>
+  <router-outlet></router-outlet>
+</cm-main>
